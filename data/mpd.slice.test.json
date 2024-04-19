@@ -1,0 +1,130 @@
+{
+    "info": {
+        "generated_on": "2017-12-03 08:41:42.057563", 
+        "slice": "testslice", 
+        "version": "v1"
+    }, 
+    "playlists": [
+        {
+            "name": "Test1", 
+            "tracks": [
+                {
+                    "track_name": "Song 1"
+                },
+                {
+                    "track_name": "Song 2"
+                },
+                {
+                    "track_name": "Song 3"
+                },
+                {
+                    "track_name": "Song 4"
+                }
+            ]
+        },
+        {
+            "name": "Test2", 
+            "tracks": [
+                {
+                    "track_name": "Song 5"
+                },
+                {
+                    "track_name": "Song 6"
+                },
+                {
+                    "track_name": "Song 7"
+                },
+                {
+                    "track_name": "Song 8"
+                }
+            ]
+        },
+        {
+            "name": "Test3", 
+            "tracks": [
+                {
+                    "track_name": "Song 5"
+                },
+                {
+                    "track_name": "Song 6"
+                },
+                {
+                    "track_name": "Song 7"
+                },
+                {
+                    "track_name": "Song 8"
+                }
+            ]
+        },
+        {
+            "name": "Test4", 
+            "tracks": [
+                {
+                    "track_name": "Song 5"
+                },
+                {
+                    "track_name": "Song 6"
+                },
+                {
+                    "track_name": "Song 7"
+                },
+                {
+                    "track_name": "Song 8"
+                }
+            ]
+        },
+        {
+            "name": "Test5", 
+            "tracks": [
+                {
+                    "track_name": "Song 3"
+                },
+                {
+                    "track_name": "Song 4"
+                },
+                {
+                    "track_name": "Song 5"
+                },
+                {
+                    "track_name": "Song 6"
+                }
+            ]
+        },
+        {
+            "name": "Test6", 
+            "tracks": [
+                {
+                    "track_name": "Song 3"
+                },
+                {
+                    "track_name": "Song 4"
+                },
+                {
+                    "track_name": "Song 7"
+                }
+            ]
+        },
+        {
+            "name": "Test7", 
+            "tracks": [
+                {
+                    "track_name": "Song 5"
+                },
+                {
+                    "track_name": "Song 6"
+                }
+            ]
+        },
+        {
+            "name": "Test8", 
+            "tracks": [
+                {
+                    "track_name": "Song 1"
+                },
+                {
+                    "track_name": "Song 7"
+                }
+            ]
+        }
+    ]
+}
