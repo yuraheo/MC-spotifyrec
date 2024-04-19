@@ -1,5 +1,5 @@
 # command to get dict file, and inputfile
-# python learn.py <dictionaryName> <inputName>
+# python learn.py <dictionaryName> <inputName> # input file should be the json with the list of 
 import os.path
 import json
 import sys
@@ -11,7 +11,7 @@ def main():
     if inputFile == "":
         # interactive mode (putting values into dict)
         while True:
-            userInput = raw_input(">> ")
+            userInput = input(">> ")
             if userInput == "":
                 break
 
@@ -19,7 +19,10 @@ def main():
             updateFile(dictionaryFile, dictionary)
     else:
         # read from file
-        print("Not yet implemented")
+        # from the master json file, pick out each name of the file
+        learnify(file)
+        
+
 
 
 def readArguments():
@@ -45,26 +48,41 @@ def loadDictionary(filename):
     file.close()
     return dictionary
 
+def learnify(file): # one json file
+    # Parse the JSON
+    data = json.loads(file)
+    input = ""
+    for playlist in data["playlists"]:
+        for track in playlist['tracks']:
+            input += track['track_name']
+        
+
+
+
+
+
+
+
 def learn(dict, input):
     tokens = input.split("//") # we want to make songs into a list of strings with // seperating them
     for i in range(0, len(tokens) - 1):
         currentSong = tokens[i]
         nextSong = tokens[i+ 1]
         
-    if currentSong not in dict:
-        # create new entry in dictionary
-        dict[currentSong] = { nextSong: 1}
-    else:
-        # current song was alr in dict
-        allNextSongs = dict[currentSong]
-
-        if nextSong not in allNextSongs:
-            # add new next state
-            dict[currentSong][nextSong] = 1
-
+        if currentSong not in dict:
+            # create new entry in dictionary
+            dict[currentSong] = { nextSong: 1}
         else:
-            # alr exists, just increment
-            dict[currentSong][nextSong] = dict[currentSong][nextSong] + 1
+            # current song was alr in dict
+            allNextSongs = dict[currentSong]
+
+            if nextSong not in allNextSongs:
+                # add new next state
+                dict[currentSong][nextSong] = 1
+
+            else:
+                # alr exists, just increment
+                dict[currentSong][nextSong] = dict[currentSong][nextSong] + 1
     return dict
 
 def updateFile(filename, dictionary):
