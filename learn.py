@@ -1,5 +1,5 @@
 # command to get dict file, and inputfile
-# python learn.py <dictionaryName> <matrixName> <inputName> # input file should be the json with the list of 
+# python learn.py <dictionaryName> <matrixName> <read> # last arg optional for read mode
 import os.path
 import json
 import sys
@@ -22,8 +22,8 @@ def main():
             updateDictFile(dictionaryFile, dictionary)
     else:
         # read from file
-        # file_pattern = "mpd.slice.*.json"
-        file_pattern = "mpd.slice.test.json"
+        file_pattern = "mpd.slice.*.json"
+        # file_pattern = "mpd.slice.test.json"
         for file_path in Path("data").glob(file_pattern):
             with open(file_path, 'r', encoding='utf-8') as file:
                 dictionary, a_matrix = learnify(dictionary, a_matrix, file)

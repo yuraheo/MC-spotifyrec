@@ -9,7 +9,7 @@ def main():
     dictionary = loadDictionary(dictfilename)
     a_matrix = loadMatrix(matrixfilename)
 
-    lastSong = "~~~~~~~~~~~~~~~~" # sth we are unlikely to encounter at the begining
+    lastSong = "First Song" # set the first song
     result = "Music Recommendation: "
     musicreclist = []
 
